@@ -3,7 +3,7 @@
     <p>This project consists of multiple microservices with a service registry, an API gateway, and two core microservices: User Service and Contact Service.</p>
     <h2>Services and Ports</h2>
     <ul>
-        <li><strong>Service Registry</strong>: Running at port <code>87615</code></li>
+        <li><strong>Service Registry</strong>: Running at port <code>8761</code></li>
         <li><strong>API Gateway</strong>: Running at port <code>8085</code></li>
         <li><strong>User Microservice</strong>: Running at port <code>8880</code></li>
         <li><strong>Contact Microservice</strong>: Running at port <code>8881</code></li>
