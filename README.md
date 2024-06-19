@@ -3,7 +3,7 @@
     <p>This project consists of multiple microservices with a service registry, an API gateway, and two core microservices: User Service and Contact Service.</p>
     <h2>Services and Ports</h2>
     <ul>
-        <li><strong>Service Registry</strong>: Running at port <code>8075</code></li>
+        <li><strong>Service Registry</strong>: Running at port <code>87615</code></li>
         <li><strong>API Gateway</strong>: Running at port <code>8085</code></li>
         <li><strong>User Microservice</strong>: Running at port <code>8880</code></li>
         <li><strong>Contact Microservice</strong>: Running at port <code>8881</code></li>
@@ -26,30 +26,30 @@
     <p>This service uses Spring Cloud Netflix Eureka for service discovery.</p>
     <div class="code-block">
         <pre>cd service-registry
-mvn spring-boot:run</pre>
+mvn spring-boot: run</pre>
     </div>
     <h3>2. API Gateway</h3>
     <p>The API Gateway uses Spring Cloud Gateway.</p>
     <div class="code-block">
-        <pre>cd api-gateway
-mvn spring-boot:run</pre>
+        <pre>cd API-gateway
+mvn spring-boot: run</pre>
     </div>
     <h3>3. User Microservice</h3>
     <p>The User Microservice handles user data and communicates with the Contact Microservice to fetch contact details.</p>
     <div class="code-block">
         <pre>cd user-service
-mvn spring-boot:run</pre>
+mvn spring-boot: run</pre>
     </div>
     <h3>4. Contact Microservice</h3>
     <p>The Contact Microservice handles contact data associated with users.</p>
     <div class="code-block">
         <pre>cd contact-service
-mvn spring-boot:run</pre>
+mvn spring-boot: run</pre>
     </div>
     <h2>API Endpoints</h2>
     <h3>User Microservice</h3>
     <ul>
-        <li><strong>Get All Users</strong>: <code>GET /users</code>
+        <li><strong>Get All Users</strong>: <code>GET /user/get</code>
             <ul>
                 <li>Returns a list of all users along with their contact details.</li>
                 <li>This endpoint triggers the Contact Microservice to fetch associated contacts for each user.</li>
@@ -67,7 +67,7 @@ mvn spring-boot:run</pre>
     <h2>Example Usage</h2>
     <p>To retrieve all users along with their contact details:</p>
     <div class="code-block">
-        <pre>curl -X GET http://localhost:8085/users</pre>
+        <pre>curl -X GET http://localhost:8085/user/get</pre>
     </div>
     <p>This request goes through the API Gateway, which routes it to the User Microservice. The User Microservice then fetches the contact details for each user by communicating with the Contact Microservice.</p>
     <h2>Project Structure</h2>
@@ -114,7 +114,7 @@ eureka:
 
 spring:
   application:
-    name: api-gateway
+    name: API-gateway
 
 eureka:
   client:
@@ -147,9 +147,9 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8075/eureka/</pre>
+      defaultZone: http://localhost:8761/eureka/</pre>
     </div>
     <h2>Conclusion</h2>
     <p>This setup demonstrates a simple microservices architecture with a service registry, an API gateway, and core microservices for managing users and contacts. Each microservice is independently deployable and scalable.</p>
-    <p>For any issues or questions, please feel free to open an issue or contact the maintainers.</p>
+    <p>For any issues or questions, please open an issue or contact the maintainers.</p>
 </body>
