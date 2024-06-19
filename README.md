@@ -19,7 +19,8 @@
     <ul>
         <li>Java 17</li>
         <li>Maven</li>
-        <li>Docker (optional, for containerization)</li>
+        <li>SpringBoot 3.2.6</li>
+          <li>MySql</li>
     </ul>
     <h2>Getting Started</h2>
     <h3>1. Service Registry</h3>
